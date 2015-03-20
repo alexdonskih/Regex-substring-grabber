@@ -1,0 +1,12 @@
+/* put your styles here */
+body{
+	text-align: center;
+}
+
+.page{
+	padding: 0 300px;
+}
+
+pre{
+	text-align: left;
+}

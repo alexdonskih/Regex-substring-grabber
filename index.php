@@ -8,26 +8,17 @@ if($content && $regexp){
   $result = @implode("\n", $matches[0]);
 }
 ?>
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Document</title>
-  <link rel="stylesheet" type="text/css" href="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.3/css/bootstrap.min.css">
-
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.3/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css" type="text/css">
+	<link rel="shortcut icon" href="favicon.ico" type="image/icon">
 </head>
-<style>
-  body{
-    text-align: center;
-  }
-  .page{
-    padding: 0 300px;
-  }
-  pre{
-    text-align: left;
-  }
-</style>
 <body>
+<!-- your html here -->
 <div class="container">
 <div class="page">
 <h1>Grab substrings with regexp</h1>
@@ -52,12 +43,8 @@ if(!empty($result)){
 
 </div>
 </div>
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-<script>
-$(document).ready(function(){
-
-});
-</script>
-
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script src="js/script.js"></script>
 </body>
 </html>
