@@ -1,13 +1,3 @@
-<?php
-$content = $_POST['content'];
-$regexp = $_POST['regexp'];
-
-if($content && $regexp){
-  $regexp = str_replace('/','\/',$regexp);
-  @preg_match_all('/'.trim($regexp).'/', $content, $matches);
-  $result = @implode("\n", $matches[0]);
-}
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,20 +11,20 @@ if($content && $regexp){
 <!-- your html here -->
 <div class="container">
 <div class="page">
-<h1>Grab substrings with regexp</h1>
+<h1>Grab substrings with regex</h1>
 <br>
 
 <?php
 if(!empty($result)){
   echo "<pre>{$result}</pre>";
 } else {
-  echo "<div class=\"alert alert-danger\">Bad regexp or nothing grabbed</div>";
+  echo "<div class=\"alert alert-danger\">Bad regex or nothing grabbed</div>";
 }
 ?>
 
 <br>
 <form action="" role="form" method="post">
-    <input type="text" class="form-control" name="regexp" id="regexp" placeholder="regexp">
+    <input type="text" class="form-control" name="regex" id="regex" placeholder="regex">
     <br>
     <textarea id="content" name="content" class="form-control" rows="14" placeholder="content to search through"></textarea>
     <br>
